@@ -1,0 +1,9 @@
+Buildfile: C:\PData\Mendix\Aelion\DTAPTempMx8\deployment\build_core.xml
+
+clean:
+   [delete] Deleting directory C:\PData\Mendix\Aelion\DTAPTempMx8\deployment\model
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+

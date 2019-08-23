@@ -1,0 +1,8 @@
+Buildfile: C:\PData\Mendix\Aelion\DTAP Module-MX8\deployment\build_core.xml
+
+deploy:
+     [copy] Copying 25 files to C:\PData\Mendix\Aelion\DTAP Module-MX8\deployment
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
