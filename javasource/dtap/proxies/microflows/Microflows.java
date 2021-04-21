@@ -17,106 +17,46 @@ public class Microflows
 	// These are the microflows for the DTAP module
 	public static void aCT_DTAPInformation_ShowExample(IContext context)
 	{
-		try
-		{
-			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
-			Core.execute(context, "DTAP.ACT_DTAPInformation_ShowExample", params);
-		}
-		catch (CoreException e)
-		{
-			throw new MendixRuntimeException(e);
-		}
+		Map<java.lang.String, Object> params = new HashMap<>();
+		Core.microflowCall("DTAP.ACT_DTAPInformation_ShowExample").withParams(params).execute(context);
 	}
 	public static boolean aSU_DTAPInitialize(IContext context)
 	{
-		try
-		{
-			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
-			return (java.lang.Boolean)Core.execute(context, "DTAP.ASU_DTAPInitialize", params);
-		}
-		catch (CoreException e)
-		{
-			throw new MendixRuntimeException(e);
-		}
+		Map<java.lang.String, Object> params = new HashMap<>();
+		return (java.lang.Boolean) Core.microflowCall("DTAP.ASU_DTAPInitialize").withParams(params).execute(context);
 	}
 	public static dtap.proxies.DTAPInformation dS_DTAPInformation(IContext context)
 	{
-		try
-		{
-			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
-			IMendixObject result = (IMendixObject)Core.execute(context, "DTAP.DS_DTAPInformation", params);
-			return result == null ? null : dtap.proxies.DTAPInformation.initialize(context, result);
-		}
-		catch (CoreException e)
-		{
-			throw new MendixRuntimeException(e);
-		}
+		Map<java.lang.String, Object> params = new HashMap<>();
+		IMendixObject result = (IMendixObject)Core.microflowCall("DTAP.DS_DTAPInformation").withParams(params).execute(context);
+		return result == null ? null : dtap.proxies.DTAPInformation.initialize(context, result);
 	}
 	public static dtap.proxies.DTAPInformation dTAPInformation_GetCreate(IContext context)
 	{
-		try
-		{
-			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
-			IMendixObject result = (IMendixObject)Core.execute(context, "DTAP.DTAPInformation_GetCreate", params);
-			return result == null ? null : dtap.proxies.DTAPInformation.initialize(context, result);
-		}
-		catch (CoreException e)
-		{
-			throw new MendixRuntimeException(e);
-		}
+		Map<java.lang.String, Object> params = new HashMap<>();
+		IMendixObject result = (IMendixObject)Core.microflowCall("DTAP.DTAPInformation_GetCreate").withParams(params).execute(context);
+		return result == null ? null : dtap.proxies.DTAPInformation.initialize(context, result);
 	}
 	public static java.lang.String dTAPInformation_RetrieveApplicationURL(IContext context)
 	{
-		try
-		{
-			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
-			return (java.lang.String)Core.execute(context, "DTAP.DTAPInformation_RetrieveApplicationURL", params);
-		}
-		catch (CoreException e)
-		{
-			throw new MendixRuntimeException(e);
-		}
+		Map<java.lang.String, Object> params = new HashMap<>();
+		return (java.lang.String) Core.microflowCall("DTAP.DTAPInformation_RetrieveApplicationURL").withParams(params).execute(context);
 	}
 	public static dtap.proxies.ENU_DTAP_Level dTAPInformation_RetrieveCurrentDTAP_Level(IContext context)
 	{
-		try
-		{
-			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
-			java.lang.String result = (java.lang.String)Core.execute(context, "DTAP.DTAPInformation_RetrieveCurrentDTAP_Level", params);
-			if (result == null)
-				return null;
-			return dtap.proxies.ENU_DTAP_Level.valueOf(result);
-		}
-		catch (CoreException e)
-		{
-			throw new MendixRuntimeException(e);
-		}
+		Map<java.lang.String, Object> params = new HashMap<>();
+		java.lang.String result = (java.lang.String) Core.microflowCall("DTAP.DTAPInformation_RetrieveCurrentDTAP_Level").withParams(params).execute(context);
+		return result == null ? null : dtap.proxies.ENU_DTAP_Level.valueOf(result);
 	}
 	public static java.lang.Long dTAPInformation_RetrieveCurrentDTAP_Level_AsInteger(IContext context)
 	{
-		try
-		{
-			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
-			return (java.lang.Long)Core.execute(context, "DTAP.DTAPInformation_RetrieveCurrentDTAP_Level_AsInteger", params);
-		}
-		catch (CoreException e)
-		{
-			throw new MendixRuntimeException(e);
-		}
+		Map<java.lang.String, Object> params = new HashMap<>();
+		return (java.lang.Long) Core.microflowCall("DTAP.DTAPInformation_RetrieveCurrentDTAP_Level_AsInteger").withParams(params).execute(context);
 	}
 	public static dtap.proxies.ENU_Environment dTAPInformation_RetrieveCurrentEnvironment(IContext context)
 	{
-		try
-		{
-			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
-			java.lang.String result = (java.lang.String)Core.execute(context, "DTAP.DTAPInformation_RetrieveCurrentEnvironment", params);
-			if (result == null)
-				return null;
-			return dtap.proxies.ENU_Environment.valueOf(result);
-		}
-		catch (CoreException e)
-		{
-			throw new MendixRuntimeException(e);
-		}
+		Map<java.lang.String, Object> params = new HashMap<>();
+		java.lang.String result = (java.lang.String) Core.microflowCall("DTAP.DTAPInformation_RetrieveCurrentEnvironment").withParams(params).execute(context);
+		return result == null ? null : dtap.proxies.ENU_Environment.valueOf(result);
 	}
 }
